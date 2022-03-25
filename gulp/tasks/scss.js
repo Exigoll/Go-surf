@@ -20,8 +20,7 @@ export const scss = () => {
 		.pipe(sass({
 			outputStyle: 'expanded',
 			includePaths: [
-				'./node_modules',
-				'./node_modules/slick-slider/slick'
+				'./node_modules'
 			]
 		}))
 		.pipe(

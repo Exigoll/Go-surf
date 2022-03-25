@@ -4,10 +4,10 @@ import * as flsFunctions from './modules/functions.js'
 flsFunctions.isWebp()
 
 // Slick slider
-import * as slick from './modules/libs.min.js'
+import * as slickSlider from './modules/libs.min.js'
 
 // Slick slider
-$(slick = () => {
+$(slickSlider = () => {
 	$('.header__slider').slick({
 		infinite: true,
 		fade: true,
