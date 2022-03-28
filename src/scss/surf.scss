@@ -1,0 +1,276 @@
+@import 'vars';
+
+.surf {
+	padding: 160px 0 120px;
+	background: url(../img/surf-bg.png) no-repeat right 200px / auto;
+
+	&__subtitle {
+		margin-top: -86px;
+		padding-right: 80px;
+		text-align: right;
+	}
+}
+
+.surf-slider {
+	padding-top: 110px;
+
+	.slick-slide:nth-child(4n + 1) {
+
+		.surf-box {
+			margin-top: 32px;
+		}
+	}
+	.slick-slide:nth-child(4n + 3) {
+
+		.surf-box {
+			margin-top: 89px;
+		}
+	}
+
+	.slider-arrows {
+		top: 50px;
+	}
+
+	.slick-current {
+
+		.surf-box__inner-btn {
+			display: block;
+		}
+
+		.surf-box__inner {
+			background: rgba($color-dark-mask, .3);
+		}
+	}
+}
+
+.surf-box {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	&__inner {
+		position: relative;
+		min-height: 750px;
+		background: rgba($color-dark-mask, .85);
+		transition: all .5s;
+
+		&:hover {
+			background: rgba($color-dark-mask, .3);
+
+			.surf-box__inner-btn {
+				display: block;
+			}
+		}
+
+		&-title {
+			width: 140px;
+			padding: 72px 0 0 40px;
+			font-weight: 800;
+			font-size: 40px;
+			line-height: 36px;
+		}
+
+		&-location {
+			position: absolute;
+			left: 40px;
+			bottom: 80px;
+			width: 0;
+			height: 0;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 22px;
+			letter-spacing: 8px;
+			white-space: nowrap;
+			transform: rotate(-90deg);
+
+			span {
+				font-weight: 100;
+			}
+		}
+
+		&-btn {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			display: none;
+			text-align: center;
+		}
+	}
+}
+
+// Slider map
+
+.slider-map {
+	margin: 0 auto;
+	max-width: 1200px;
+	min-height: 635px;
+	background: url(../img/surf-bg-map.png) no-repeat center / cover;
+
+	.slick-list {
+		min-height: 635px;
+	}
+
+	.slick-current {
+
+		.slider-dots__content {
+			display: block;
+			width: 285px;
+			padding: 28px 31px 0 32px;
+			font-weight: 800;
+
+
+
+			&-row {
+				display: flex;
+				justify-content: space-between;
+				padding-bottom: 30px;
+			}
+
+			&-title {
+				position: relative;
+				margin-bottom: 8px;
+				padding-bottom: 8px;
+				font-size: 18px;
+				line-height: 26px;
+
+				&::before {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 80px;
+					height: 1px;
+					background-color: $color-turquoise;
+				}
+			}
+
+			&-subtitle {
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 19px;
+				text-transform: capitalize;
+			}
+
+			&-link {
+				padding-top:	5px;
+			}
+
+			&-number {
+				font-size: 16px;
+				line-height: 23px;
+			}
+
+			&-text {
+				font-weight: 300;
+				font-size: 10px;
+				line-height: 12px;
+				text-transform: capitalize;
+			}
+		}
+	}
+}
+
+.slider-dots__content {
+	position: absolute;
+	bottom: 35px;
+	display: none;
+	background: $color-black;
+	border-radius: 10px;
+	transform: translateX(-60%);
+
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: -20px;
+		left: 60%;
+		width: 0;
+		height: 0;
+		border-bottom: 20px solid $color-turquoise;
+		border-left: 12px solid transparent;
+		border-right: 12px solid transparent;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+
+	}
+
+}
+
+
+
+.slider-dots {
+	position: relative;
+}
+
+.slider-dots--1 {
+	top: 335px;
+	left: 0;
+
+	.slider-dots__content {
+		transform: translateX(0);
+
+		&::before {
+			left: 0;
+		}
+	}
+}
+.slider-dots--2 {
+	top: 290px;
+	left: 0;
+
+	.slider-dots__content {
+		transform: translateX(0);
+
+		&::before {
+			left: 0;
+		}
+	}
+
+	.slider-dots__circle {
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: -25px;
+			right: -15px;
+			width: 14px;
+			height: 17px;
+			background-image: url(../img/mini-marker.png);
+			background-size: cover;
+
+		}
+	}
+
+}
+.slider-dots--3 {
+	top: 314px;
+	left: 33px;
+}
+.slider-dots--4 {
+	top: 500px;
+	left: -50px;
+}
+.slider-dots--5 {
+	top: 230px;
+	left: -65px;
+}
+.slider-dots--6 {
+	top: 550px;
+	left: -120px;
+}
+.slider-dots--7 {
+	top: 375px;
+	left: -95px;
+}
+.slider-dots--8 {
+	top: 470px;
+	left: 35px;
+}
+
+.slider-dots__circle {
+	height: 24px;
+	width: 24px;
+	border-radius: 50%;
+	background-color: $color-turquoise;
+}
