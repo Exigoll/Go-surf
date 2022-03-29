@@ -178,11 +178,83 @@ li {
 
 
 .surf,
-.travel {
+.travel,
+.sleep {
 	padding: 160px 0 120px;
-
 }
 
-.travel {
-	padding-bottom: 250px;
+.travel,
+.sleep {
+	padding-bottom: 265px;
+	margin-bottom: 35px;
+}
+
+
+.quantity {
+	display: inline-block;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type=number]
+{
+	-moz-appearance: textfield;
+}
+
+.quantity input {
+	width: 45px;
+	height: 42px;
+	float: left;
+	display: block;
+	margin: 0;
+	padding: 15px 0 0 20px;
+	border: none;
+	color: $color-white;
+	font-weight: 800;
+	font-size: 40px;
+	line-height: 36px;
+	background: transparent;
+}
+
+.quantity input:focus {
+	outline: 0;
+}
+
+.quantity-nav {
+	float: left;
+	position: static;
+	height: 42px;
+}
+
+.quantity-button {
+	position: relative;
+	cursor: pointer;
+	width: 20px;
+	border: none;
+	text-align: center;
+	color: $color-turquoise;
+	font-size: 30px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif !important;
+	line-height: 1.7;
+	transform: translateX(-100%);
+	user-select: none;
+}
+
+.quantity-button.quantity-up {
+	position: absolute;
+	height: 50%;
+	top: 35px;
+	right: -25px;
+}
+
+.quantity-button.quantity-down {
+	position: absolute;
+	top: 35px;
+	right: 0;
+	height: 50%;
 }
